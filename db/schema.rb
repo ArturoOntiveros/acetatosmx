@@ -11,12 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160922202440) do
+ActiveRecord::Schema.define(version: 20160922214623) do
 
   create_table "acetatos", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "singer"
+    t.string   "song"
+    t.string   "genre"
+    t.string   "star"
+    t.string   "ranking"
+    t.datetime "duration"
   end
 
   create_table "active_admin_comments", force: :cascade do |t|
@@ -56,7 +62,10 @@ ActiveRecord::Schema.define(version: 20160922202440) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "acetato_id"
   end
+
+  add_index "songs", ["acetato_id"], name: "index_songs_on_acetato_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
