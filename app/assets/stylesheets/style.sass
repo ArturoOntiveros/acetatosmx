@@ -42,7 +42,7 @@ footer
 	margin-top: 5rem
 .button
 	box-shadow: inset 0 0 1px rgba(0,0,0,.3)
-	padding: 0.2rem 1rem
+	padding: 0.1rem .4rem
 	border-radius: 500px
 	background-color: #fff
 	color: #7F8C8D
@@ -51,7 +51,7 @@ footer
 		color: #fff
 .header
 	position: fixed
-	top: 0rem
+	top: 0.14rem
 	width: 100%
 	box-shadow: 0 1px 2px rgba(0,0,0,.1),0 -1px 0 rgba(0,0,0,.02)
 	padding: 0.8rem 0
@@ -61,6 +61,10 @@ footer
 		display: flex
 		justify-content: space-between
 		align-items: center
+	&__logo
+		width: 40%
+		img
+			width: 100%
 	&__perfil
 		width: 2rem
 		img
@@ -76,7 +80,7 @@ footer
 	z-index: 10000
 	position: fixed
 	width: 100%
-	top: 3.9rem
+	top: 3.8rem
 	background: white
 	display: none
 	ul
@@ -122,9 +126,9 @@ footer
 //- Inicio
 .inicio
 	.inicio__musica
-		background-image: url('../img/musica.jpg')
+		background-image: url('/assets/musica.jpg')
 	.inicio__artista
-		background-image: url('../img/artistas.jpg')
+		background-image: url('/assets/artistas.jpg')
 	.inicio__musica, .inicio__artista
 		background-size: cover
 		padding: 10rem 0 8rem 0
@@ -135,3 +139,23 @@ footer
 		p
 			color: #fff
 			margin: 4rem
+//- Formulario Login
+.form
+	text-align: center
+	label
+		font-size: 1.5rem
+	&__button
+		border: 0
+		margin: 1rem 0 !important
+	&__label
+		border: 0
+		border-bottom: 0.2rem solid #02b875
+		width: 80%
+		margin: 1rem 0 !important
+		&:hover, &:focus
+			border-bottom: 0.2rem solid #e74c3c
+
+
+
+
+

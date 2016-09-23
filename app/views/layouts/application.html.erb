@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Acetatosmx</title>
+  <title><%= @titulo %></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+  <link rel="stylesheet" href="https://file.myfontastic.com/2mkBAz4kVSMEZcWv2q3x2K/icons.css"/>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-
-
+	<header class="header">
+	  <div class="wrapper header__flex">
+	    <figure class="header__logo"><a href="<%= root_path %>"><%= image_tag("logo.jpeg") %></figure></a>
+	    <figure class="header__perfil"><%= image_tag("perfil.jpg") %></figure><a href="<%=new_user_session_path %>" class="button">Log-in</a> 
+<%= link_to('Log-out', destroy_user_session_path, :method => :delete, class: 'button') %>
+	    <div class="header__nav icon-menu"></div>
+	  </div>
+	</header>
+  <nav class="nav">
+    <ul>
+      <li><a href="<%= root_path %>">Inicio</a></li>
+      <li><a href="">Mi Perfil</a></li>
+      <li><a href="">Cultura Musical</a></li>
+      <li><a href="<%= artistas_prueba_path %>">Artistas</a></li>
+      <li><a href="">Conócenos</a></li>
+      <li><a href="">Contacto</a></li>
+    </ul>
+  </nav>
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
-<%= yield %>
-
+	<%= yield %>
+  <div class="wrapper">
+    <footer>
+      <p>Sitio hecho por: Apa</p>
+    </footer>
+  </div>
 </body>
 </html>

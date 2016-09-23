@@ -1,53 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <title>Pulse - Tienda en línea para los mejores CD</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
-    <link rel="stylesheet" href="https://file.myfontastic.com/2mkBAz4kVSMEZcWv2q3x2K/icons.css"/>
-    <%= stylesheet_link_tag "style" %>
-<!--     <link rel="stylesheet" href="css/style.css"/> -->
-  </head>
-  <body>
-    <header class="header">
-      <div class="wrapper header__flex">
-        <figure class="header__logo"><img class="img-responsive" src="/assets/logo.jpeg" alt=""/></figure>
-        <figure class="header__perfil"><img src="/assets/perfil.jpg" alt=""/></figure><a href="<%=new_user_session_path %>" class="button">Log-in</a> <a href="<%=new_user_registration_path %>" class="button">Sign-up</a> 
-          <%= link_to('Log-out', destroy_user_session_path, :method => :delete, class: 'button') %>
-        <div class="header__nav icon-menu"></div>
-      </div>
-    </header>
-    <nav class="nav">
-      <ul>
-        <li><a href="<%= root_path %>">Inicio</a></li>
-        <li><a href="">Mi Perfil</a></li>
-        <li><a href="">Cultura Musical</a></li>
-        <li><a href="<%= artistas_prueba_path %>">Artistas</a></li>
-        <li><a href="">Conócenos</a></li>
-        <li><a href="">Contacto</a></li>
-      </ul>
-    </nav>
-    <div class="inicio">
-      <div class="inicio__musica">
-        <div class="wrapper">
-          <h1>Música</h1>
-          <p>Encuentra la mejor música del momento</p><a href="#" class="button">Ver Canciones</a>
-        </div>
-      </div>
-      <div class="inicio__artista">
-        <div class="wrapper">
-          <h1>Música</h1>
-          <p>Encuentra la mejor música del momento</p><a href="<%= artistas_prueba_path %>" class="button">Ver Artistas</a>
-        </div>
-      </div>
-    </div>
-    <div class="inicio__info"></div>
+<div class="inicio">
+  <div class="inicio__musica">
     <div class="wrapper">
-      <footer>
-        <p>Sitio hecho por: Apa</p>
-      </footer>
+      <h1>Música</h1>
+      <p>Encuentra el recuerdo musical que te identifica</p><a href="#" class="button">Ver Canciones</a>
     </div>
-<!--     <script src="js/jquery.js"></script> -->
-    <script src="/assets/menu.js"></script>
-  </body>
-</html>
+  </div>
+  <div class="inicio__artista">
+    <div class="wrapper">
+      <h1>AcetatosMX</h1>
+      <p>Encuentra los mejores clásicos de todos los tiempos</p><a href="artistas.html" class="button">Ver Artistas</a>
+    </div>
+  </div>
+</div>
+<div class="inicio__info"></div>

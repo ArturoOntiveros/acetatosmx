@@ -1,5 +1,5 @@
 ActiveAdmin.register Acetato do
-permit_params :name, :singer, :song, :genre, :star, :ranking
+permit_params :name, :singer, :song, :genre, :star, :ranking, :duration
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -22,6 +22,7 @@ permit_params :name, :singer, :song, :genre, :star, :ranking
     column :genre
     column :star
     column :ranking
+    column :duration    
     actions
   end
 

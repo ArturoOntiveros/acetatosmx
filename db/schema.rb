@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160922214623) do
+ActiveRecord::Schema.define(version: 20160923185903) do
 
   create_table "acetatos", force: :cascade do |t|
     t.string   "name"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20160922214623) do
     t.string   "genre"
     t.string   "star"
     t.string   "ranking"
-    t.datetime "duration"
+    t.time     "duration"
   end
 
   create_table "active_admin_comments", force: :cascade do |t|
