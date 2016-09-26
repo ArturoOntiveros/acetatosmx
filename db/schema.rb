@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160923185903) do
+ActiveRecord::Schema.define(version: 20160926165358) do
 
   create_table "acetatos", force: :cascade do |t|
     t.string   "name"
@@ -58,6 +58,30 @@ ActiveRecord::Schema.define(version: 20160923185903) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
+  create_table "comments", force: :cascade do |t|
+    t.text     "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "releaseds", force: :cascade do |t|
+    t.string   "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "singers", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "songs", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -66,6 +90,12 @@ ActiveRecord::Schema.define(version: 20160923185903) do
   end
 
   add_index "songs", ["acetato_id"], name: "index_songs_on_acetato_id"
+
+  create_table "stories", force: :cascade do |t|
+    t.text     "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
